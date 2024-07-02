@@ -87,7 +87,7 @@ body {
 }
 
 .sub-menu {
-    display: none !important; /* Hide submenu by default */
+    display: none; /* Hide submenu by default */
     list-style: none;
     padding: 0;
     margin: 0;
@@ -112,6 +112,10 @@ body {
 
 .sub-menu .menu-item a:hover {
     background: #f0f0f0;
+}
+
+.js .main-navigation .sub-menu {
+    display: none;
 }
 
 /* Media Queries for mobile devices */
