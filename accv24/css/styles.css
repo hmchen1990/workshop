@@ -1,0 +1,136 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.people-section {
+    display: grid;
+    gap: 5px;
+    padding: 2px;
+}
+
+/* Default: 1 person per row */
+.people-section {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+/* Tablets: 2 people per row */
+@media (min-width: 600px) {
+    .people-section {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Small desktops: 3 people per row */
+@media (min-width: 900px) {
+    .people-section {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Large desktops: 4 people per row */
+@media (min-width: 1200px) {
+    .people-section {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.person {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.person img {
+    width: 50%;
+    height: auto;
+    border-radius: 10%;
+    margin-bottom: 1px;
+}
+
+.person h3 {
+    margin: 10px 0 5px;
+    font-size: 1.2em;
+}
+
+.person p {
+    font-size: 0.9em;
+    color: #666;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu-item {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: #000;
+}
+
+.menu-item-has-children {
+    position: relative;
+}
+
+.sub-menu {
+    display: none; /* Hide submenu by default */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+}
+
+.sub-menu .menu-item {
+    display: block;
+    margin: 0;
+}
+
+.sub-menu .menu-item a {
+    padding: 10px 20px;
+    display: block;
+    color: #000;
+}
+
+.sub-menu .menu-item a:hover {
+    background: #f0f0f0;
+}
+
+.js .main-navigation .sub-menu {
+    display: none;
+}
+
+/* Media Queries for mobile devices */
+@media (max-width: 600px) {
+    .menu-item {
+        display: block;
+        margin: 10px 0;
+    }
+    
+    .menu-item-has-children {
+        display: block;
+    }
+    
+    .sub-menu {
+        position: static; /* Make submenu position static on mobile */
+        box-shadow: none; /* Remove box-shadow for better mobile experience */
+    }
+}
